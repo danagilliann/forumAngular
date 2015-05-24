@@ -7,12 +7,16 @@
 		<script src="app.js"></script>
 		<style>.glyphicon-thumbs-up {cursor: pointer}</style>
 	</head>
-	<body ng-app="flapperNews" ng-controller="MainCtrl"></body>
+	<body ng-app="flapperNews"></body>
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
+				<ui-view></ui-view>
+				
+				<script type="text/ng-template" id="/home.html">
 					<div class="page-header">
 						<h1>Flapper News</h1>
-					</div>	
+					</div>
+				</script>	
 
 					<div ng-repeat="postees in posts | orderBy: '-upvotes'">
 						<span class="glyphicon glyphicon-thumbs-up" 
